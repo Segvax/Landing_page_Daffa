@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+.Poppins{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+:root {
+    --bg-color: #0c0c0c;
+    --text-color: #fff;
+    --main-color: #ae8957;
+    --hover-color: #949494;
+    --big-font: 6.6rem;
+    --p-font: 1.5rem;
+}
+
+body {
+    position: relative;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem; /* Adjust as necessary */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(ghost-of-tsushima-samurai-uhdpaper.com-4K-5.1569.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place behind other content */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px; /* Atur tinggi header sesuai keinginan */
+    padding: 0 7%; /* Atur padding atas dan bawah menjadi 0 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+    background-color: #141e1fcb/* Gunakan rgba untuk opacity background */
+}
+.logo img {
+    width: 100%;
+    height: auto;
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    display: inline-block;
+    margin: 0 35px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .6s ease;
+}
+
+.navlist a:hover {
+    color: var(--hover-color);
+}
+
+.right-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 9px 24px;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 7px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .6s ease;
+}
+
+.nav-btn:hover {
+    transform: translate(-5px);
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+}
+
+#menu-icon {
+    font-size: 42px;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+section {
+    padding: 0 14%;
+}
+
+.sejarahjinsakai{
+    display: flex;
+    gap: 3rem;
+}
+.coach{
+    display: flex;
+}
+.imgsejarahjinsakai{
+    width: 500px;
+}
+.Tentang{
+    padding: 20px;
+    margin-top: 7rem;
+}
+
+.Tentang div{
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sejarah {
+    margin-bottom: 40px;
+    background: #141E1F;
+}
+.info {
+    margin-bottom: 40px;
+    background: #141E1F;
+    font-size: 14px;
+}
+.rilis{
+    margin-bottom: 40px;
+    background: #141E1F;
+}
+.varian {
+    margin-bottom: 40px;
+    background: #141E1F;
+}
+
+.info h2, .sejarah h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: transparent;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .bx-menu {
+        display: block;
+    }
+    header .navlist {
+        display: none;
+    }
+    header .bx-menu.active + .navlist {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sejarahmc {
+        padding: 20px;
+    }
+
+    .info h2, .prestasi h2 {
+        font-size: 24px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .sejarahjinsakai{
+        flex-direction: column;
+    }
+    .info{
+        flex-direction: column;
+    }
+}
+@media (max-width: 1535px){
+    header{
+        padding: 15px 3%;
+        transition: 2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2sk  ;
+    }
+}
+@media (max-width: 990px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 300px;
+        height: 40vh;
+        background: #ffb8b8;
+        display: none; /* Display none untuk tampilan mobile */
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist.active {
+        display: flex !important; /* Display flex ketika burger menu aktif */
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+}
